@@ -1,0 +1,16 @@
+---
+description: Domain rules (inventory_master folder tidy)
+globs: ["src/**", "tests/**", "docs/**", "config/**"]
+alwaysApply: false
+---
+
+Use when working on:
+- Everything provider integration (ES/HTTP/SDK)
+- Plan JSON schema & policy enforcement
+- Transactional Executor + audit/snapshot
+
+Key defaults:
+- write OFF
+- allow_delete=false
+- require_hash_verify=true
+- max_actions=200

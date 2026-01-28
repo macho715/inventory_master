@@ -1,0 +1,42 @@
+---
+description: Cursor-only agent patterns and multi-agent workflow integration
+globs: ["**/*"]
+alwaysApply: true
+---
+
+## SSOT Hierarchy
+- `agents.md` (root) = SSOT for file operations safety and architecture
+- `.cursor/agents/*.md` = Cursor-specific agent implementations
+- `.cursor/skills/*/SKILL.md` = Reusable workflows that use agents
+
+## File Operations Safety
+- Treat `agents.md` as SSOT for file operations safety.
+- If a task involves filesystem writes, enforce **Plan → Human Approve → Apply**.
+- Use subagents for Explore/Plan/Verify; only `executor` and `implementer` are allowed to write (after approval).
+
+## Agent Selection
+- Use `.cursor/agents/` definitions for Cursor IDE agent selection
+- Reference `agent-selector` skill when deciding which agent to use
+- Follow workflow dependencies: `explore` → `planner` → `approver` → `executor`
+
+## Write Operations (Approval Required)
+- `implementer`: Code changes (after approval or TDD workflow)
+- `executor`: File moves/renames (after approval token validation)
+- `qa`: Test file creation only (no approval needed)
+
+## Read-Only Agents (Safe)
+- `explore`, `planner`, `approver`, `reviewer`, `verifier`, `researcher`, `coordinator`
+- Can be used without approval
+- No file modifications allowed
+
+## Integration Points
+- Skills reference agents: `plan-gated-apply` uses `planner` + `executor`
+- TDD workflow: `tdd-go` skill uses `implementer` agent
+- Approval workflow: `approval-gate` skill uses `approver` agent
+- Verification: Always use `verifier` agent after write operations
+
+## Migration Notes
+- Root-level `agents.md` remains SSOT for architecture and safety rules
+- Cursor agents in `.cursor/agents/` are operational implementations
+- Skills in `.cursor/skills/` provide reusable workflows
+- See `docs/AGENTS_AND_SKILLS_GUIDE.md` for complete usage guide

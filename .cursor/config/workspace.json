@@ -1,0 +1,29 @@
+{
+  "openOnStart": [
+    "README.md",
+    "agent.md",
+    "docs/constitution.md",
+    "docs/AGENTS.md",
+    "plan.md"
+  ],
+  "terminals": {
+    "shortcuts": [
+      {
+        "name": "pytest",
+        "cmd": "pytest -q"
+      },
+      {
+        "name": "pre-commit",
+        "cmd": "pre-commit run --all-files"
+      },
+      {
+        "name": "lint",
+        "cmd": "ruff check . && ruff format --check . && black --check . && isort --check-only ."
+      },
+      {
+        "name": "report",
+        "cmd": "python -m inventory_master report --root \"C:\\\\inventory_master\\\\\""
+      }
+    ]
+  }
+}

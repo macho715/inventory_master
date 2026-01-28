@@ -1,0 +1,9 @@
+---
+description: Modern Python practices (py313)
+globs: ["src/**", "tests/**"]
+alwaysApply: true
+---
+
+- Keep functions small and testable
+- Use `os.replace` when atomic replacement is needed; never overwrite without explicit policy
+- Avoid implicit writes; require explicit flags for any destructive operation

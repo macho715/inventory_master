@@ -1,0 +1,10 @@
+---
+description: Python 3.13 conventions
+globs: ["src/**", "tests/**", "tools/**"]
+alwaysApply: true
+---
+
+- Target Python **3.13**
+- Prefer stdlib; keep dependencies minimal
+- Use pathlib, dataclasses, typing
+- Hashing: use streaming SHA-256 (avoid reading whole file into memory)

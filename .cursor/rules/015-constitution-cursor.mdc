@@ -1,0 +1,8 @@
+---
+description: Bind docs/constitution.md as non-negotiable principles
+globs: ["**/*"]
+alwaysApply: true
+---
+
+- The principles in `docs/constitution.md` are non-negotiable.
+- If any instruction conflicts, stop and surface the conflict before proceeding.

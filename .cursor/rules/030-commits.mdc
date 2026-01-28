@@ -1,0 +1,9 @@
+---
+description: Git workflow + commit conventions
+globs: ["**/*"]
+alwaysApply: true
+---
+
+- Conventional Commits recommended: `feat:`, `fix:`, `chore:`, `docs:`, `test:`
+- Trunk-based: `main` + short-lived `feature/*`
+- PR gate: CODEOWNERS ≥ 2 approvals + CI green

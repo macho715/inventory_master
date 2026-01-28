@@ -1,0 +1,10 @@
+---
+description: TDD + SoT rules
+globs: ["src/**", "tests/**", "plan.md"]
+alwaysApply: true
+---
+
+- SoT = `plan.md`.
+- When user says **go**, select the **next unchecked test** only.
+- Loop: **RED → GREEN → REFACTOR**.
+- Keep commits split: structural vs behavioral.

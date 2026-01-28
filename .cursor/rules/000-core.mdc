@@ -1,0 +1,19 @@
+---
+description: Core operating rules (style, safety, scope)
+globs: ["**/*"]
+alwaysApply: true
+---
+
+## Output format
+- Outputs follow: **ExecSummary → Visual → Options → Roadmap → Automation → QA**
+- KR concise + EN-inline allowed
+- Numbers: **2-dec**
+
+## Safety (file ops)
+- Inventory/Search is read-only.
+- Any write action must follow **Plan → Human Approve → Apply**.
+- delete is OFF by default (use quarantine).
+
+## Scope guard
+- Default edits: `src/**`, `tests/**`
+- Setup allowed: `.cursor/**`, `.github/**`, `config/**`, `tools/**`, `pyproject.toml`, `plan.md`, `CODEOWNERS`, `README.md`

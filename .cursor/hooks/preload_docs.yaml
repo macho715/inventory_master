@@ -1,0 +1,9 @@
+preload_docs:
+  - path: "README.md"
+    open_on_start: true
+  - path: "agent.md"
+    open_on_start: true
+  - path: "docs/constitution.md"
+    open_on_start: true
+  - path: "plan.md"
+    open_on_start: true

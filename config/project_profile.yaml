@@ -1,0 +1,23 @@
+project:
+  name: inventory_master
+  domain: generic
+  python: "3.13"
+  timezone: "Asia/Dubai"
+  default_root_windows: "C:\\inventory_master\\"
+  codeowners:
+    - "@org/owner1"
+    - "@org/owner2"
+quality:
+  coverage_min: 85.00
+  lint_zero_warn: true
+security:
+  bandit_high_zero: true
+  pip_audit_strict: true
+file_ops_policy:
+  allow_delete: false
+  require_hash_verify: true
+  require_dry_run: true
+  max_actions: 200
+http_server_policy:
+  recommended_bind: "127.0.0.1"
+  allow_file_download: false
