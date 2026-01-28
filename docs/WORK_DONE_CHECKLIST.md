@@ -82,10 +82,7 @@ git commit -m "feat(providers): Everything ES/HTTP/SDK + reporting fallback and 
 
 ### Step 4: (선택) 푸시
 ```powershell
-git push origin main
-# 또는 feature 브랜치 사용 시
-# git checkout -b feature/everything-providers
-# git push origin feature/everything-providers
+git push -u origin main
 ```
 
 ---

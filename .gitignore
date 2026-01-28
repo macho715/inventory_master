@@ -7,3 +7,6 @@ _meta/
 dist/
 build/
 *.egg-info/
+.env
+.env.local
+*.token
